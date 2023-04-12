@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <style>
+    #image1{
+      width: 600px;
+      height: 600px;
+    }
+    #image2{
+      width: 800px;
+      height: 400px;
+    }
+    #image3{
+      width: 900px;
+      height: 300px;
+    }
+    #image0{
+      width: 900px;
+      height: 700px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <h1><a href="{% url 'homePage'%}">Web Dictonary</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">App Concepts</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'DictionaryPage' %}">DictionaryPage</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-text" data-aos="zoom-out">
+      <h2>Welcome</h2>
+      <p>Get the Meanings, Synonyms, and Antonyms of your Words</p>
+      <a href="{% url 'DictionaryPage' %}" class="btn-get-started scrollto">Get Started</a>
+    </div>
+
+    <div class="product-screens">
+
+      <div class="product-screen-1" data-aos="fade-up" data-aos-delay="400">
+        <img id="image1" src="{% static 'img/dict1.jpg' %}" alt="">
+      </div>
+
+      <div class="product-screen-2" data-aos="fade-up" data-aos-delay="200">
+        <img id="image2" src="{% static 'img/dict2.jpg' %}" alt="">
+      </div>
+
+      <div class="product-screen-3" data-aos="fade-up">
+        <img id="image3" src="{% static 'img/dict3.jpg' %}" alt="">
+      </div>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Featuress Section ======= -->
+    <section id="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header">
+              <h3 class="section-title">App Concepts</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img id="image0" src="{% static 'img/books2.jpg' %}" alt="" data-aos="fade-right">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up">
+                <div class="icon"><i class="bi bi-briefcase"></i></div>
+                <h4 class="title"><a href="">DICTIONARY</a></h4>
+                <p class="description">The simplest dictionary, a defining dictionary, provides a core glossary of the simplest meanings of the simplest concepts. From these, other concepts can be explained and defined, in particular for those who are first learning a language. In English, the commercial defining dictionaries typically include only one or two meanings of under 2000 words. With these, the rest of English, and even the 4000 most common English idioms and metaphors, can be defined.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up">
+                <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                <h4 class="title"><a href="">MEANINGS</a></h4>
+                <p class="description">A broad distinction is made between general and specialized dictionaries. Specialized dictionaries include words in specialist fields, rather than a complete range of words in the language. Lexical items that describe concepts in specific fields are usually called terms instead of words, although there is no consensus whether lexicology and terminology are two different fields of study. </p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up" dat-aos-delay="100">
+                <div class="icon"><i class="bi bi-binoculars"></i></div>
+                <h4 class="title"><a href="">SYNONYMS</a></h4>
+                <p class="description">A synonym is a word, morpheme, or phrase that means exactly or nearly the same as another word, morpheme, or phrase in a given language. For example, in the English language, the words begin, start, commence, and initiate are all synonyms of one another: they are synonymous. The standard test for synonymy is substitution: one form can be replaced by another in a sentence without changing its meaning. Words are considered synonymous in only one particular sense: for example, long and extended in the context long time or extended time are synonymous, but long cannot be used in the phrase extended family.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="bi bi-brightness-high"></i></div>
+                <h4 class="title"><a href="">ANTONYMS</a></h4>
+                <p class="description">The term antonym (and the related antonymy) is commonly taken to be synonymous with opposite, but antonym also has other more restricted meanings. Graded (or gradable) antonyms are word pairs whose meanings are opposite and which lie on a continuous spectrum (hot, cold). Complementary antonyms are word pairs whose meanings are opposite but whose meanings do not lie on a continuous spectrum (push, pull). Relational antonyms are word pairs where opposite makes sense only in the context of the relationship between the two meanings (teacher, pupil). These more restricted meanings may not apply in all scholarly contexts, with Lyons (1968, 1977) defining antonym to mean gradable antonyms, and Crystal (2003) warning that antonymy and antonym should be regarded with care.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Featuress Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-start text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>EngrAhmadaya</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="#">AHMAD YAKUBU AHMAD</a>
+          </div>
+          <div class="credits">
+            Email : <a href="#">ahmadyakubuaya@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+          </nav>
+          
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="github"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

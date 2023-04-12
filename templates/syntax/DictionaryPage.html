@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Web Dictionary</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <style>
+    body{
+        background: url("/static/img/books1.jpg");
+    }
+    .is-vishidden {
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+      
+      .pattern {
+        padding: 1em; 
+        line-height: 1;
+      }
+      .f {
+         position: relative; 
+      }
+      
+      input {
+        display: block;
+        border: 1px solid #000;
+      }
+      
+      input[type=search] {
+          width: 100%;
+          padding: 1em;
+          padding-right: 7em;
+          position: relative;
+         top: 0;
+      }
+      
+      input[type=submit] {
+        position: absolute;
+        right: 0.75em;
+        top: 0.5em;
+        bottom: 0.5em;
+        z-index: 1;
+        width: 6em;
+        padding: 0;
+        cursor: pointer;
+      }
+      #more-features{
+        background: url("/static/img/books1.jpg");
+      }
+  </style>
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= More Features Section ======= -->
+    <section id="more-features" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+            <a href="{% url 'homePage'%}"><button class="btn btn-danger">Back</button></a>
+            <div id="pattern" class="pattern">  
+    
+                <form action="search"class="f">
+                    <label class="is-vishidden">Search your favorite wod here</label>     
+                    <input type="search" name="search" placeholder="Search your favorite wod here" />
+                    <input type="submit" class="btn search-submit" value="Search">
+              </form>
+              </div>
+        </div>
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title"><a href="">WORD</a></h4>
+              <p class="description">{{ word }}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">MEANINGS</a></h4>
+              <p class="description">{{meanings}}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="">SYNONYMS</a></h4>
+              <p class="description">{{synonyms}}</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="">ANTONYMS</a></h4>
+              <p class="description">{{antonyms}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End More Features Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
